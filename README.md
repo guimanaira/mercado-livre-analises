@@ -1,4 +1,4 @@
-# Central de Controle de Eficiência Logística
+# desempenho_operacional
 
 <p align="center">
   <img src="https://img.shields.io/badge/Portfolio-Log%C3%ADstica-blue?style=for-the-badge" alt="Portfolio Logística" />
@@ -44,14 +44,14 @@ O centro de distribuição está registrando atrasos na expedição e a lideran�
 ## Estrutura do projeto
 
 ```text
-central_eficiencia_logistica/
+desempenho_operacional/
 ├── LICENSE
 ├── .gitignore
 ├── README.md
 ├── data/
 │   ├── pedidos.csv
 │   ├── ocorrencias.csv
-│   └── central_eficiencia_logistica.sqlite
+│   └── desempenho_operacional.sqlite
 ├── docs/
 │   ├── dashboard-premium.html
 │   ├── relatorio_executivo.md
@@ -62,7 +62,7 @@ central_eficiencia_logistica/
 │   ├── generate_logistics_data.py
 │   └── validate_metrics.py
 └── sql/
-    └── consultas_central_eficiencia_logistica.sql
+    └── consultas_desempenho_operacional.sql
 ```
 
 ## Dashboard premium
@@ -99,7 +99,7 @@ docs/dashboard-premium.html
 
 Importe o arquivo de consulta para o banco de dados:
 
-- [sql/consultas_central_eficiencia_logistica.sql](sql/consultas_central_eficiencia_logistica.sql)
+- [sql/consultas_desempenho_operacional.sql](sql/consultas_desempenho_operacional.sql)
 
 ## Entrega para portfólio
 

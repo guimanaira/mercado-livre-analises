@@ -7,7 +7,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
-DB_PATH = DATA_DIR / "central_eficiencia_logistica.sqlite"
+DB_PATH = DATA_DIR / "desempenho_operacional.sqlite"
 
 
 def import_csv_to_sqlite():

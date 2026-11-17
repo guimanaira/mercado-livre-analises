@@ -3,93 +3,74 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Central de Controle de Eficiência Logística</title>
+    <meta name="theme-color" content="#ffe600" />
+    <meta name="description" content="Painel executivo para acompanhar eficiência logística, atrasos e SLA." />
+    <title>Central de Eficiência Logística</title>
     <link rel="stylesheet" href="assets/dashboard.css" />
   </head>
   <body>
     <div class="dashboard-shell">
       <header class="topbar">
-        <div class="brand">
-          <div class="brand-mark">CL</div>
-          <div>
-            <div class="subtitle">Operação Logística</div>
-            <h1>Central de Controle de Eficiência Logística</h1>
-          </div>
-        </div>
-
-        <div class="toolbar">
-          <span class="pill">Período: Jan a Dez 2026</span>
-          <span class="pill">Turno: Manhã / Tarde / Noite</span>
-          <span class="pill">Status: Operação ativa</span>
+        <a class="brand" href="#inicio" aria-label="Central de Eficiência Logística">
+          <img class="brand-logo" src="assets/logo-meli.png" alt="Mercado Livre" />
+          <span class="brand-copy">
+            <span class="subtitle">Operação logística</span>
+            <h1>Central de eficiência</h1>
+          </span>
+        </a>
+        <div class="toolbar" aria-label="Filtros do painel">
+          <span class="pill"><span class="pill-dot"></span> Jan – Dez 2026</span>
+          <span class="pill">Todos os turnos</span>
+          <span class="status"><span class="status-dot"></span> Operação ativa</span>
         </div>
       </header>
 
-      <main class="grid">
-        <section class="kpis">
-          <article class="card kpi">
-            <div id="metricOrders"></div>
-          </article>
+      <main id="inicio" class="grid">
+        <section class="intro">
+          <div>
+            <p class="eyebrow">Visão geral · Centro de distribuição</p>
+            <h2>Desempenho da operação</h2>
+            <p class="intro-copy">Acompanhe os indicadores e identifique onde agir primeiro.</p>
+          </div>
+          <span class="period-label">Atualizado em <strong>27 out 2026</strong></span>
+        </section>
 
-          <article class="card kpi">
-            <div id="metricDelayed"></div>
-          </article>
-
-          <article class="card kpi">
-            <div id="metricSla"></div>
-          </article>
-
-          <article class="card kpi">
-            <div id="metricRetrabalho"></div>
-          </article>
+        <section class="kpis" aria-label="Indicadores principais">
+          <article class="card kpi"><div id="metricOrders"></div></article>
+          <article class="card kpi"><div id="metricDelayed"></div></article>
+          <article class="card kpi"><div id="metricSla"></div></article>
+          <article class="card kpi"><div id="metricRetrabalho"></div></article>
         </section>
 
         <section class="card panel large">
-          <h3>Taxa de atraso por etapa</h3>
-          <div class="chart-bars" id="barChart"></div>
+          <div class="panel-heading"><div><p class="eyebrow">Pontos de atenção</p><h3>Atrasos por etapa</h3></div><span class="unit">Índice relativo</span></div>
+          <div class="chart-bars" id="barChart" role="img" aria-label="Gráfico de atrasos por etapa"></div>
         </section>
 
         <aside class="card panel medium">
-          <h3>Principais motivos de atraso</h3>
+          <div class="panel-heading"><div><p class="eyebrow">Causa raiz</p><h3>Motivos de atraso</h3></div></div>
           <div class="progress-list" id="reasonList"></div>
         </aside>
 
         <section class="card panel small">
-          <h3>Top 3 ofensores</h3>
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr>
-                  <th>Etapa</th>
-                  <th>Motivo</th>
-                  <th>Volume</th>
-                  <th>Impacto</th>
-                </tr>
-              </thead>
-              <tbody id="offenderBody"></tbody>
-            </table>
-          </div>
+          <div class="panel-heading"><div><p class="eyebrow">Maior impacto</p><h3>Top 3 ofensores</h3></div></div>
+          <div class="table-wrap"><table>
+            <thead><tr><th>Etapa</th><th>Motivo</th><th>Volume</th><th>Impacto</th></tr></thead>
+            <tbody id="offenderBody"></tbody>
+          </table></div>
         </section>
 
-        <section class="card panel small">
-          <h3>Recomendações de ação</h3>
+        <section class="card panel small actions-panel">
+          <div class="panel-heading"><div><p class="eyebrow">Próximos passos</p><h3>Ações recomendadas</h3></div></div>
           <ul class="list">
-            <li>
-              <span>Redimensionar força de separação</span>
-              <span class="badge cyan">Alta prioridade</span>
-            </li>
-            <li>
-              <span>Revisar conferência com checklist digital</span>
-              <span class="badge orange">Média</span>
-            </li>
-            <li>
-              <span>Padronizar recebimento e etiqueta</span>
-              <span class="badge red">Crítico</span>
-            </li>
+            <li><span class="action-number">01</span><span class="action-text">Redimensionar força de separação</span><span class="badge high">Alta</span></li>
+            <li><span class="action-number">02</span><span class="action-text">Revisar conferência com checklist digital</span><span class="badge medium-priority">Média</span></li>
+            <li><span class="action-number">03</span><span class="action-text">Padronizar recebimento e etiquetagem</span><span class="badge critical">Crítica</span></li>
           </ul>
         </section>
       </main>
+      <footer class="footer"><span>Central de eficiência logística</span><span>Indicadores para decisões melhores</span></footer>
     </div>
-
     <script src="assets/dashboard.js"></script>
   </body>
 </html>
