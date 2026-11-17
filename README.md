@@ -44,25 +44,27 @@ O centro de distribuição está registrando atrasos na expedição e a lideran�
 ## Estrutura do projeto
 
 ```text
-desempenho_operacional/
-├── LICENSE
+mercado-livre-analises/
+├── central_eficiencia_logistica/
+│   ├── data/
+│   │   ├── pedidos.csv
+│   │   ├── ocorrencias.csv
+│   │   └── metricas_resumo.json
+│   ├── docs/
+│   │   ├── dashboard-premium.html
+│   │   ├── relatorio_executivo.md
+│   │   └── assets/
+│   │       ├── dashboard.css
+│   │       ├── dashboard.js
+│   │       └── logo-meli.png
+│   ├── scripts/
+│   │   ├── generate_logistics_data.py
+│   │   └── validate_metrics.py
+│   └── sql/
+│       └── consultas_desempenho_operacional.sql
 ├── .gitignore
-├── README.md
-├── data/
-│   ├── pedidos.csv
-│   ├── ocorrencias.csv
-│   └── desempenho_operacional.sqlite
-├── docs/
-│   ├── dashboard-premium.html
-│   ├── relatorio_executivo.md
-│   └── assets/
-│       ├── dashboard.css
-│       └── dashboard.js
-├── scripts/
-│   ├── generate_logistics_data.py
-│   └── validate_metrics.py
-└── sql/
-    └── consultas_desempenho_operacional.sql
+├── LICENSE
+└── README.md
 ```
 
 ## Dashboard premium
@@ -77,14 +79,14 @@ Uma versão visual mais profissional foi criada em HTML/CSS/JS para simular um d
 
 Acesse em:
 
-- [docs/dashboard-premium.html](docs/dashboard-premium.html)
+- [central_eficiencia_logistica/docs/dashboard-premium.html](central_eficiencia_logistica/docs/dashboard-premium.html)
 
 ## Como executar
 
 ### 1) Verificar dados
 
 ```bash
-python scripts/validate_metrics.py
+python central_eficiencia_logistica/scripts/validate_metrics.py
 ```
 
 ### 2) Abrir dashboard
@@ -92,14 +94,14 @@ python scripts/validate_metrics.py
 Abra o arquivo HTML diretamente no navegador:
 
 ```text
-docs/dashboard-premium.html
+central_eficiencia_logistica/docs/dashboard-premium.html
 ```
 
 ### 3) Usar consultas SQL
 
 Importe o arquivo de consulta para o banco de dados:
 
-- [sql/consultas_desempenho_operacional.sql](sql/consultas_desempenho_operacional.sql)
+- [central_eficiencia_logistica/sql/consultas_desempenho_operacional.sql](central_eficiencia_logistica/sql/consultas_desempenho_operacional.sql)
 
 ## Entrega para portfólio
 
